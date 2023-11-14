@@ -1,0 +1,90 @@
+@import '../../styles/_variables';
+
+.header {
+    margin-bottom: 25px;
+
+    &Logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: auto;
+    }
+
+    &Row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &Nav {
+        margin-left: auto;
+    }
+
+    &List {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        li {
+            display: block;
+            position: relative;
+            color: $dark;
+            text-align: center;
+            font-weight: 500;
+            line-height: 120%;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: -2px;
+                background-color: $blue;
+                height: 2px;
+                transition: all 0.3s ease-out;
+            }
+            &:hover {
+                &::after {
+                    right: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    .themeSwitcher {
+        // margin-left: 8px;
+        margin-left: auto;
+    }
+}
+
+[data-theme='dark'] .headerList > li {
+    color: $white;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        &Logo {
+            width: auto;
+        }
+        &List {
+            gap: 16px;
+        }
+    }
+}
+@media (max-width: 700px) {
+    .header {
+        &List {
+            display: none;
+        }
+    }
+}
+
+
+@media(max-width: 680px) {
+    // .headerLogo > img {
+    //     width: 46px;
+    //     height: 64px;
+    // }
+    .themeSwitcher {
+        margin-right: 4px;
+    }
+}

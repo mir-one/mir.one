@@ -1,0 +1,46 @@
+{
+  "name": "mir.one",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "https://mir.one",
+  "repository": "https://github.com/mir-one/mir.one",
+  "author": "MIR",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@types/uuid": "^9.0.4",
+    "babel-plugin-inline-react-svg": "^2.0.2",
+    "file-loader": "^6.2.0",
+    "framer-motion": "^10.16.4",
+    "next": "latest",
+    "next-images": "^1.8.5",
+    "next-themes": "^0.2.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "sass": "^1.68.0",
+    "sharp": "^0.32.6",
+    "swiper": "^10.3.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.51.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "latest",
+    "eslint-import-resolver-typescript": "^3.3.0",
+    "eslint-plugin-import": "^2.26.0",
+    "typescript": "latest",
+    "url-loader": "^4.1.1"
+  }
+}

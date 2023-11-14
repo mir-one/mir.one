@@ -1,0 +1,106 @@
+.sectionCurrencies {
+    padding: 42px 56px 56px 42px;
+    background: #f7f9fb;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    @media (max-width: 550px) {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 32px;
+        border-radius: 24px;
+        margin-bottom: 16px;
+    }
+    @media (max-width: 350px) {
+        padding: 25px;
+    }
+}
+
+[data-theme='dark'] .sectionCurrencies {
+    background: #17161b;
+}
+
+.content {
+    margin-bottom: 42px;
+    &Title {
+        margin-bottom: 20px;
+    }
+    &Description {
+        color: rgba(17, 17, 17, 0.8);
+        &Link {
+            position: relative;
+            color: #41a4df !important;
+            transition: all 0.3s ease 0s;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: -2px;
+                background-color: #41a4df;
+                height: 2px;
+                transition: all 0.3s ease-out;
+            }
+            &:hover {
+                color: #41a4df !important;
+                &::after {
+                    right: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+    @media (max-width: 550px) {
+        margin-top: 24px;
+        margin-bottom: 0;
+        &Title {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        &Description {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .contentTitle {
+        font-size: 22px;
+    }
+}
+
+[data-theme='dark'] .contentDescription {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.currencies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+    gap: 42px;
+    @media (max-width: 550px) {
+        grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+        gap: 10px;
+    }
+}
+
+.curr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &Title {
+        margin-top: 12px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgba(17, 17, 17, 0.4);
+    }
+    @media (max-width: 550px) {
+        &Title {
+            display: none;
+        }
+        &Img {
+            width: 56px;
+            height: 56px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.themeChangeBtn {
+    cursor: pointer;
+    padding: 4px;
+    margin-right: 8px;
+}
+
+@media(max-width: 680px) {
+    .themeChangeBtn > img {
+        width: 40px;
+        height: 40px;
+    }
+}

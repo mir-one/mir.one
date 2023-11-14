@@ -1,0 +1,133 @@
+@import '../../styles/_variables';
+
+.useCasesSection {
+    padding: 186px 0;
+    background-color: $dark-blue;
+}
+
+.useCasesSwiper {
+    max-height: 510px;
+    padding: 10px 0;
+    //  :first-child .UsecasesBlockTextShort {
+    //      max-width: 340px;
+    //      margin-right: 244px;
+    //  }
+}
+
+.useCasesCounts {
+    position: absolute;
+    color: $white;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+    font-family: 'Inter';
+}
+.curr {
+    bottom: 0;
+}
+.total {
+    right: 0;
+    bottom: 0px;
+}
+
+.useCasesBlockImg {
+    max-width: 488px;
+    max-height: 488px;
+}
+
+.useCasesBlockTitle {
+    color: $blue;
+    margin-bottom: 32px;
+    margin-top: 55px;
+    max-width: 480px;
+    .textBlue {
+        font-size: 56px;
+        color: $white;
+    }
+}
+
+.useCasesBlockText {
+    max-width: 488px;
+    margin-bottom: 32px;
+    color: $white;
+    margin-right: 100px;
+}
+
+.useCasesItem {
+    max-height: 488px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+@media (max-width: 1024px) {
+    .useCasesSection {
+        padding: 32px 0;
+    }
+
+    .useCasesSwiper {
+        max-height: none;
+        padding: 0;
+    }
+
+    .useCasesItem {
+        flex-direction: column;
+        align-items: center;
+        max-height: none;
+        gap: 32px;
+    }
+
+    .useCasesBlockImg {
+        max-width: 100%;
+    }
+
+    .useCasesBlockTitle {
+        max-width: 100%;
+        margin: 0 auto 24px auto;
+        width: fit-content;
+        text-align: center;
+        font-size: 32px;
+        .textBlue {
+            font-size: 32px;
+        }
+    }
+    .useCasesBlockText {
+        margin: 0px auto 32px auto;
+        font-size: 18px;
+        text-align: center;
+    }
+    .useCasesBlockBtn {
+        width: 100%;
+        max-width: 100%;
+        button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .useCasesBlockImg {
+        max-width: 340px;
+        max-height: 340px;
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 24px;
+            object-fit: contain;
+        }
+    }
+
+    .useCasesBlockTitle {
+    }
+}
+
+@media (max-width: 375px) {
+    .useCasesBlockText {
+        min-height: 66px;
+        overflow-y: auto;
+    }
+}

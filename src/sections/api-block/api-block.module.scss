@@ -1,0 +1,90 @@
+.api {
+    padding: 120px 0;
+    &Inner {
+        display: flex;
+        gap: 24px;
+        border-radius: 40px;
+        background: linear-gradient(233deg, #9fccfa -20.48%, #0974f1 97.38%);
+        background-image: url('/img/api-block/API-bg.webp');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+
+    &Content {
+        //   max-width: 430px;
+        padding: 147px 0 147px 80px;
+
+        &Title {
+            line-height: 110%;
+            letter-spacing: -1.68px;
+            margin-bottom: 32px;
+            color: #fff;
+        }
+        &Description {
+            max-width: 408px;
+            color: #fff;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+    .api {
+        &Inner {
+            width: 100%;
+            min-height: 514px;
+            border-radius: 24px;
+            background-size: cover;
+            background-image: url('/img/api-block/API-bg-mob.webp');
+            background-attachment: lazy;
+        }
+        &Content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 28px 32px;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .api {
+        padding: 72px 0;
+        &Content {
+            &Title {
+                text-align: left;
+                margin-bottom: 24px;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 629;
+                line-height: 110%;
+                letter-spacing: -0.96px;
+            }
+            &Description {
+                max-width: 100%;
+                margin-bottom: 24px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .api {
+        &Inner {
+            min-height: 400px;
+        }
+        &Content {
+            &Title {
+                font-size: 28px;
+            }
+            &Description {
+                font-size: 18px;
+            }
+        }
+    }
+}

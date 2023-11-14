@@ -1,0 +1,214 @@
+@import '../../styles/_variables';
+
+.instructionBlock {
+    background-color: $light-gray;
+    padding: 120px 0;
+}
+
+@media (max-width: 768px) {
+    .instructionBlock {
+        padding: 80px 0;
+    }
+}
+
+[data-theme='dark'] .instructionBlock {
+    background-color: #18181d;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titleSpan {
+    color: $blue;
+}
+
+.inner {
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+
+    &Heading {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 20px 16px;
+    }
+}
+
+.itemReverse {
+    flex-direction: row-reverse;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.itemStep {
+    padding: 9px 22px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    border-radius: 50%;
+    font-size: 42px;
+    font-weight: 629;
+    line-height: 110%;
+    letter-spacing: -1.25px;
+    background: linear-gradient(220deg, #010417 10.26%, #2b333f 84.25%),
+        linear-gradient(46deg, #000 15.89%, #434343 171.16%);
+    box-shadow: 0px 0px 8px 0px rgba(182, 186, 191, 0.04), 0px 2px 3px 0px rgba(0, 0, 0, 0.02);
+}
+
+[data-theme='dark'] .itemStep {
+    background: #fff;
+    color: #0d0d12;
+}
+
+[data-theme='dark'] .itemDescription {
+    color: #fff;
+}
+
+.body {
+    margin-top: 20px;
+}
+
+.body > ol li {
+    list-style-type: decimal;
+}
+.body > ul li {
+    list-style-type: disc;
+    &::marker {
+        color: $blue;
+    }
+}
+.body ul li,
+.body ol li {
+    margin-left: 20px;
+}
+
+.listItem:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.itemDescription {
+    color: rgba(17, 17, 17, 0.8);
+    margin-top: 20px;
+}
+
+.itemLink {
+    color: $blue !important;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: -1px;
+        background-color: #41a4df;
+        height: 2px;
+        transition: all 0.3s ease-out;
+    }
+    &:hover {
+        color: #297ee2;
+        &::after {
+            right: 0;
+            left: 0;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .img {
+        max-width: 590px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .item {
+        gap: 30px;
+    }
+    .InstructionBlock {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .item,
+    .itemReverse {
+        flex-direction: column-reverse;
+    }
+    .item {
+        &Heading {
+            flex-direction: row;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+    }
+
+    .Title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        max-width: 600px;
+        margin: 0 auto 24px;
+    }
+    .item {
+        gap: 16px;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+    .img {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 550px) {
+    .InstructionBlock {
+        padding: 32px 0;
+    }
+    .title {
+        font-size: 32px;
+    }
+    .item {
+        &:nth-child(2) {
+            h3 {
+                max-width: 180px;
+            }
+        }
+    }
+    .itemHeading {
+        margin-right: auto;
+        h3 {
+            font-size: 28px;
+        }
+        .itemStep {
+            padding: 5px 12px;
+            font-size: 24px;
+        }
+    }
+    .itemContent {
+        width: 100%;
+    }
+    .body {
+        margin-left: 52px;
+    }
+    .itemDescription {
+        font-size: 18px;
+        margin-left: 52px;
+    }
+}

@@ -1,0 +1,76 @@
+@import '../../styles/_variables';
+
+.actionButton {
+  color: #FFF;
+}
+
+.footer {
+    padding: 120px 0 40px 0;
+    background: #232328;
+    margin-top: -40px;
+    &Row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &List {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        li {
+            display: block;
+            position: relative;
+            color: $white;
+            text-align: center;
+            font-weight: 500;
+            line-height: 120%;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: -2px;
+                background-color: $blue;
+                height: 2px;
+                transition: all 0.3s ease-out;
+            }
+            &:hover {
+                &::after {
+                    right: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+  margin-top: 24px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media(max-width: 768px) {
+  .footer {
+    padding: 70px 0 32px 0;
+  }
+}
+
+@media(max-width: 680px) {
+  .footerNav {
+    display: none;
+  }
+  .copyright {
+    font-size: 18px;
+  }
+  .footerLogo > img {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+
+[data-theme="dark"] .footerList > li {
+  color: $white;
+}

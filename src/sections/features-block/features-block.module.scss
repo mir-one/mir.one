@@ -1,0 +1,325 @@
+.features {
+    padding: 144px 0;
+}
+
+.featuresTopInner {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.featuresBottom {
+    display: flex;
+    gap: 20px;
+}
+
+.start {
+    padding: 42px 56px;
+    border-radius: 40px;
+    background: #f7f9fb;
+    width: 486px;
+    margin-bottom: 20px;
+    &Video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        > video {
+            object-fit: cover;
+            width: 376px;
+            height: 152px;
+        }
+    }
+    &Title {
+        margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+        &Title {
+            font-size: 28px;
+        }
+    }
+    @media (max-width: 530px) {
+        padding: 32px;
+        &Video {
+            > video {
+                width: 271px;
+                height: 119px;
+            }
+        }
+    }
+}
+
+.stats {
+    padding: 42px 56px;
+    border-radius: 32px;
+    background: #f7f9fb;
+    &Video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+        > video {
+            object-fit: cover;
+            border-radius: 24px;
+            width: 580px;
+            height: 526px;
+        }
+    }
+    &Title {
+        margin-bottom: 20px;
+    }
+}
+
+.exchange {
+    padding: 42px 56px;
+    border-radius: 40px;
+    background: #f7f9fb;
+    width: 486px;
+    &Video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        > video {
+            width: 280px;
+            height: 142px;
+            border-radius: 260px;
+        }
+    }
+    &Title {
+        margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+        &Title {
+            font-size: 28px;
+        }
+    }
+    @media (max-width: 530px) {
+        padding: 32px;
+        &Video {
+            > video {
+                width: 271px;
+                height: 119px;
+            }
+        }
+    }
+}
+
+.commission {
+    width: 692px;
+    padding: 0 42px 42px 42px;
+    background: #f7f9fb;
+    border-radius: 40px;
+    &Video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 27px;
+        > video {
+            object-fit: cover;
+            width: 474px;
+        }
+    }
+    &Title {
+        margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+        &Title {
+            font-size: 28px;
+        }
+    }
+    @media (max-width: 530px) {
+        padding: 0 32px 32px 32px;
+        width: 100%;
+        &Video {
+            > video {
+                width: 260px;
+                height: 198px;
+            }
+        }
+    }
+}
+
+.link {
+    color: #41a4df !important;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: -1px;
+        background-color: #41a4df;
+        height: 2px;
+        transition: all 0.3s ease-out;
+    }
+    &:hover {
+        &::after {
+            right: 0;
+            left: 0;
+        }
+    }
+}
+
+.payments {
+    padding: 42px;
+    border-radius: 40px;
+    background: #f7f9fb;
+    width: 486px;
+    &Video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        > video {
+            border-radius: 32px;
+            width: 404px;
+            height: 222px;
+            object-fit: cover;
+        }
+    }
+    &Title {
+        margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+        &Title {
+            font-size: 28px;
+        }
+    }
+    @media (max-width: 530px) {
+        padding: 32px;
+        &Video {
+            border-radius: 16px;
+            > video {
+                width: 334px;
+                height: 157px;
+            }
+        }
+    }
+}
+
+.text {
+    color: rgba(17, 17, 17, 0.8);
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+[data-theme="dark"] .start {
+  background: #17161B;
+}
+[data-theme="dark"] .stats {
+  background: #17161B;
+}
+[data-theme="dark"] .exchange {
+  background: #17161B;
+}
+[data-theme="dark"] .commission {
+  background: #17161B;
+}
+[data-theme="dark"] .payments {
+  background: #17161B;
+}
+[data-theme="dark"] .text {
+  color: rgba(255, 255, 255, 0.80);
+}
+
+@media (max-width: 1250px) {
+    .features {
+      padding: 100px 0;
+    }
+    .featuresTopInner {
+        flex-direction: column;
+    }
+    .featuresTop {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    .start {
+        width: 50%;
+        margin-bottom: 0;
+    }
+    .exchange {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .features {
+      padding: 80px 0;
+    }
+    .featuresBottom {
+        flex-direction: column;
+    }
+    .commission {
+        width: 100%;
+    }
+    .payments {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .featuresTop {
+        flex-direction: column;
+    }
+    .start {
+        width: 100%;
+    }
+    .exchange {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .statsTitle {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 720px) {
+    .stats {
+        &Video {
+            border-radius: 16px;
+            height: 100%;
+            > video {
+                height: 281px;
+                width: 271px;
+            }
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .stats {
+        padding: 32px;
+    }
+    .payments {
+        padding: 32px;
+    }
+    .featuresTopInner {
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 350px) {
+    .startTitle {
+        font-size: 22px;
+    }
+    .exchangeTitle {
+        font-size: 22px;
+    }
+    .statsTitle {
+        font-size: 22px;
+    }
+    .commissionTitle {
+        font-size: 22px;
+    }
+    .paymentsTitle {
+        font-size: 22px;
+    }
+}
